@@ -56,15 +56,12 @@ h3 {
 }
 #section1 {
   background-image: url(../images/hypertape-screenshot.png);
-  /*padding: 6% 0 0 0;*/
 }
 #section2 {
   background-image: url(../images/delmarorchids-screenshot.jpg);
-  /*padding: 6% 0 0 0;*/
 }
-#section4 {
-  /*background-image: url(https://raw.githubusercontent.com/alvarotrigo/fullPage.js/master/examples/imgs/bg4.jpg);*/
-  /*padding: 6% 0 0 0;*/
+#section3 {
+  background-image: url(../images/shokudo-screenshot.png);
 }
 
 /*Adding background for the slides
