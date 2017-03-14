@@ -1,0 +1,212 @@
+/*============================================================
+GENERAL
+============================================================*/
+* { box-sizing: border-box; }
+
+body {
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  font-family: Raleway;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: Futura; }
+
+svg {
+  position: absolute;
+  top: -60vw;
+  left: -160vw;
+  width: 320vw;
+  height: 320vw;
+  font-family: Futura;
+  font-size: 0.25em;
+  pointer-events: none;
+}
+svg text { pointer-events: auto; }
+
+main {
+  position: absolute;
+  top: -20vw;
+  left: -120vw;
+  z-index: -10;
+  width: 240vw;
+  height: 240vw;
+  background-color: white;
+  color: black;
+}
+
+.circle {
+  border-radius: 50%;
+  behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+a:hover {
+  color: #1aa4d8;;
+  fill: #1aa4d8;
+  transition: all 0.3s ease-in-out;
+}
+
+.sp-canvas { display: none; }
+
+.blue { color: #1aa4d8; }
+
+/*============================================================
+SECTIONS
+============================================================*/
+section {
+  position: absolute;
+  height: 120vw;
+  width: 120vw;
+}
+section#about-quadrant {
+  top: 0;
+  left: 120vw;
+}
+section#projects-quadrant {
+  top: 120vw;
+  left: 120vw;
+}
+section#skills-quadrant {
+  top: 120vw;
+  left: 0;
+}
+section#contact-quadrant {
+  top: 0;
+  left: 0;
+}
+
+/*============================================================
+SECTION/BOXES
+============================================================*/
+div#about-box {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 45%;
+}
+div#projects-box {
+  position: absolute;
+  bottom: 40%;
+  left: 25%;
+  width: 55%;
+}
+div#skills-box {
+  position: absolute;
+  bottom: 35%;
+  right: 25%;
+  width: 35%;
+}
+div#contact-box {
+  position: absolute;
+  top: 40%;
+  right: 25%;
+  width: 45%;
+}
+
+/*============================================================
+BOXES CONTENT
+============================================================*/
+/*ABOUT CONTENT*/
+div#about-box div#oliver {
+  height: 15vw;
+  width: 15vw;
+  margin-bottom: 2vw;
+  background-image: url(../images/oliver.jpg);
+  background-size: cover;
+}
+
+/*PROJECTS CONTENT*/
+div#projects-box div {
+  display: relative;
+  top: 0;
+  float: left;
+  height: 10vw;
+  width: 10vw;
+  margin-right: 5vw;
+  margin-bottom: 5vw;
+  background-size: cover;
+}
+div#projects-box div#hypertape { background-image: url(../images/hypertape.png); }
+div#projects-box div#orchids { background-image: url(../images/orchid.jpg); }
+div#projects-box div#shokudo { background-image: url(../images/shokudo.jpg); }
+div#projects-box div#tappd { background-image: url(../images/tappd.png); }
+div#projects-box div:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Chrome, Safari, Opera */
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+div#projects-box span {
+  position: relative;
+  top: 110%;
+  left: 50%;
+  display: inline-block;
+  font-size: 0.25rem;
+  text-align: center;
+    -ms-transform: translate(-50%, 0); /* IE 9 */
+    -webkit-transform: translate(-50%, 0); /* Safari */
+    transform: translate(-50%, 0);
+}
+div#projects-box div#hypertape span { font-family: "Permanent Marker"; font-size: 0.75em; }
+div#projects-box div#orchids span { font-family: "Rock Salt"; }
+div#projects-box div#shokudo span { font-family: "Londrina Solid"; font-size: 0.75em; }
+/* Larger than mobile */
+@media (min-width: 400px) {
+  div#projects-box span { font-size: 0.5rem; }
+  div#projects-box div#hypertape span { font-size: 0.75em; }
+  div#projects-box div#shokudo span { font-size: 0.75em; }
+}
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  div#projects-box span { font-size: 0.75rem; }
+  div#projects-box div#hypertape span { font-size: 1em; }
+  div#projects-box div#shokudo span { font-size: 1em; }
+}
+/* Larger than tablet */
+@media (min-width: 750px) {
+  div#projects-box span { font-size: 1.25rem; }
+  div#projects-box div#hypertape span { font-size: 1.5em; }
+  div#projects-box div#shokudo span { font-size: 1.5em; }
+}
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  div#projects-box span { font-size: 1.5rem; }
+  div#projects-box div#hypertape span { font-size: 2em; }
+  div#projects-box div#shokudo span { font-size: 2em; }
+}
+
+/*SKILLS CONTENT*/
+div#skills-box div#front-end img, div#skills-box div#back-end img {
+  display: inline-block;
+  height: 5vw;
+  width: 5vw;
+  margin-right: 2vw;
+  margin-bottom: 2vw;
+}
+div#skills-box img:last-child { margin-right: 0; }
+
+/*CONTACT CONTENT*/
+div#contact-box div {
+  float: left;
+  height: 5vw;
+  width: 5vw;
+  margin-right: 3vw;
+  background-size: cover;
+  transition: background-image 0.3s ease-in-out;
+}
+div#contact-box div#email { background-image: url(../images/mail-blk.svg); }
+div#contact-box div#email:hover { background-image: url(../images/mail-blue.svg); }
+div#contact-box div#resume { background-image: url(../images/resume-blk.svg); }
+div#contact-box div#resume:hover { background-image: url(../images/resume-blue.svg); }
+div#contact-box div#linkedin { background-image: url(../images/linkedin-blk.svg); }
+div#contact-box div#linkedin:hover { background-image: url(../images/linkedin-blue.svg); }
+div#contact-box div#github { background-image: url(../images/github-blk.svg); }
+div#contact-box div#github:hover { background-image: url(../images/github-blue.svg); }
+div#contact-box div#instagram { background-image: url(../images/instagram-blk.svg); }
+div#contact-box div#instagram:hover { background-image: url(../images/instagram-blue.svg); }
