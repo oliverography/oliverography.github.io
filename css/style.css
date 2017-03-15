@@ -20,19 +20,18 @@ svg {
   height: 320vw;
   font-family: Futura;
   font-size: 0.25em;
-  pointer-events: none;
 }
-svg text { pointer-events: auto; }
+/*svg text { pointer-events: auto; }*/
 
 main {
   position: absolute;
   top: -20vw;
   left: -120vw;
-  z-index: -10;
   width: 240vw;
   height: 240vw;
   background-color: white;
   color: black;
+  pointer-events: none;
 }
 
 .circle {
@@ -88,24 +87,28 @@ div#about-box {
   top: 25%;
   left: 25%;
   width: 45%;
+  pointer-events: auto;
 }
 div#projects-box {
   position: absolute;
   bottom: 40%;
   left: 25%;
   width: 55%;
+  pointer-events: auto;
 }
 div#skills-box {
   position: absolute;
   bottom: 35%;
   right: 25%;
   width: 35%;
+  pointer-events: auto;
 }
 div#contact-box {
   position: absolute;
   top: 40%;
   right: 25%;
   width: 45%;
+  pointer-events: auto;
 }
 
 /*============================================================
@@ -136,9 +139,9 @@ div#projects-box div#orchids { background-image: url(../images/orchid.jpg); }
 div#projects-box div#shokudo { background-image: url(../images/shokudo.jpg); }
 div#projects-box div#tappd { background-image: url(../images/tappd.png); }
 div#projects-box div:hover {
-  -ms-transform: scale(1.1); /* IE 9 */
-  -webkit-transform: scale(1.1); /* Chrome, Safari, Opera */
-  transform: scale(1.05);
+  -ms-transform: scale(1.05, 1.05); /* IE 9 */
+  -webkit-transform: scale(1.05, 1.05); /* Chrome, Safari, Opera */
+  transform: scale(1.05, 1.05);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -197,8 +200,9 @@ div#contact-box div {
   height: 5vw;
   width: 5vw;
   margin-right: 3vw;
-  background-size: cover;
-  transition: background-image 0.3s ease-in-out;
+  background-size: contain;
+  /*-webkit-transition: all 0.3s;*/ /* Safari */
+  /*transition: all 0.3s ease-in-out;*/
 }
 div#contact-box div#email { background-image: url(../images/mail-blk.svg); }
 div#contact-box div#email:hover { background-image: url(../images/mail-blue.svg); }
