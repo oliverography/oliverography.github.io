@@ -98,7 +98,7 @@ div#projects-box {
 }
 div#skills-box {
   position: absolute;
-  bottom: 35%;
+  bottom: 30%;
   right: 25%;
   width: 35%;
   pointer-events: auto;
