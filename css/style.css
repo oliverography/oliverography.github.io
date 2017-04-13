@@ -5,6 +5,7 @@ GENERAL
 
 body {
   overflow: hidden;
+  position:relative;
   background-color: black;
   color: white;
   font-family: Raleway;
