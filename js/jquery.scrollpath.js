@@ -63,9 +63,8 @@
         element.css( "position", "relative" );
 
         $( document ).on({
-          "scroll": scrollHandler,
-          // "mousewheel": scrollHandler,
-          // "DOMMouseScroll": ("onmousewheel" in document) ? null : scrollHandler, // Firefox
+          "mousewheel": scrollHandler,
+          "DOMMouseScroll": ("onmousewheel" in document) ? null : scrollHandler, // Firefox
           "keydown": keyHandler,
           "mousedown": function( e ) {
             if( e.button === 1 ) {

@@ -64,8 +64,8 @@
 
         $( document ).on({
           "scroll": scrollHandler,
-          "mousewheel": scrollHandler,
-          "DOMMouseScroll": ("onmousewheel" in document) ? null : scrollHandler, // Firefox
+          // "mousewheel": scrollHandler,
+          // "DOMMouseScroll": ("onmousewheel" in document) ? null : scrollHandler, // Firefox
           "keydown": keyHandler,
           "mousedown": function( e ) {
             if( e.button === 1 ) {
@@ -407,6 +407,8 @@
   function scrollHandler( e ) {
     var scrollDelta = e.originalEvent.wheelDelta || -e.originalEvent.detail,
       dir = scrollDelta / ( Math.abs( scrollDelta ) );
+
+    alert("scrolling");
 
     e.preventDefault();
     $( window ).scrollTop( 0 ).scrollLeft( 0 );
