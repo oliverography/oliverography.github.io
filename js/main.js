@@ -4,4 +4,4 @@ $(document).ready(function() {
 });
 
 // Reload on window resize
-$(window).resize(function(){location.reload();});
+// $(window).resize(function(){location.reload();});
